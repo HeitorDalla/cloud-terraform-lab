@@ -12,7 +12,8 @@ resource "google_compute_instance" "simple_vm" {
   }
 
   network_interface {
-    network    = "default"
+    network    = google_compute_network.vpc_global.id
+    subnetwork = google_compute_subnetwork.subnet_web.id
 
     access_config {
       // cria um ip public efemero

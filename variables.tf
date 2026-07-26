@@ -14,6 +14,23 @@ variable "zone_gcp" {
   description = "Zone gcp"
 }
 
+// Variaveis VPC
+variable "vpc_name" {
+  type        = string
+  description = "Nome da VPC para as instancias"
+}
+
+// Variaveis Subnets
+variable "subnet_name" {
+  type        = string
+  description = "Nome da sub-rede dentro da VPC"
+}
+
+variable "subnet_cidr" {
+  type        = string
+  description = "Intervalo de IPs da sub-rede"
+}
+
 // Variaveis VM
 variable "name_vm" {
   type        = string
