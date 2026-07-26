@@ -46,14 +46,3 @@ variable "subnet_cidr" {
   type        = string
   description = "Intervalo de IPs da sub-rede"
 }
-
-// Variaveis VM
-variable "name_vm" {
-  type        = string
-  description = "Name vm para rodar servidor web"
-}
-
-variable "machine_type" {
-  type        = string
-  description = "Tipo de maquina que vai rodar a VM"
-}

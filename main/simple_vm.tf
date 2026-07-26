@@ -6,14 +6,14 @@ resource "google_compute_instance" "simple_vm" {
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-12"
+      image = "debian-cloud/debian-13"
       size  = 10
     }
   }
 
   network_interface {
-    network    = google_compute_network.vpc_global.id
-    subnetwork = google_compute_subnetwork.subnet_web.id
+    network    = data.terraform_remote_state.core.outputs.network_id
+    subnetwork = data.terraform_remote_state.core.outputs.subnet_id
 
     access_config {
       // cria um ip public efemero
