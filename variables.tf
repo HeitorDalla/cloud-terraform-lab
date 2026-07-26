@@ -20,6 +20,22 @@ variable "vpc_name" {
   description = "Nome da VPC para as instancias"
 }
 
+// Variaveis para Firewall
+variable "firewall_name_http" {
+  type        = string
+  description = "Permitir trafego HTTP para a instancia"
+}
+
+variable "firewall_name_https" {
+  type        = string
+  description = "Permitir trafego HTTPS para a instancia"
+}
+
+variable "firewall_name_ssh" {
+  type        = string
+  description = "Permitir trafego SSH para a instancia"
+}
+
 // Variaveis Subnets
 variable "subnet_name" {
   type        = string
