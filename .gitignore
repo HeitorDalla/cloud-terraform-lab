@@ -1,0 +1,22 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+orverride.tf.json
+
+# Variaveis
+terraform.tfvars
+*.auto.tfvars
+
+# Credenciais
+*.json
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
