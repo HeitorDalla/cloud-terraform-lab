@@ -1,4 +1,4 @@
-// Variaveis globais
+// Globais
 variable "project_id" {
   type        = string
   description = "Project id"
@@ -14,13 +14,13 @@ variable "zone_gcp" {
   description = "Zone gcp"
 }
 
-// Variaveis VPC
+// VPC
 variable "vpc_name" {
   type        = string
   description = "Nome da VPC para as instancias"
 }
 
-// Variaveis para Firewall
+// Firewall
 variable "firewall_name_http" {
   type        = string
   description = "Permitir trafego HTTP para a instancia"
@@ -36,7 +36,7 @@ variable "firewall_name_ssh" {
   description = "Permitir trafego SSH para a instancia"
 }
 
-// Variaveis Subnets
+// Subnets
 variable "subnet_name" {
   type        = string
   description = "Nome da sub-rede dentro da VPC"
@@ -45,4 +45,25 @@ variable "subnet_name" {
 variable "subnet_cidr" {
   type        = string
   description = "Intervalo de IPs da sub-rede"
+}
+
+// KMS
+variable "keyring_name" {
+  type        = string
+  description = "Keyring da chave KMS"
+}
+
+variable "symkey_name" {
+  type        = string
+  description = "Nome da chave KMS"
+}
+
+variable "rotation_period" {
+  type        = string
+  description = "Periodo de rotacao da chave"
+}
+
+variable "destroy_scheduled_duration" {
+  type        = string
+  description = "Tempo para destruicao programada"
 }
