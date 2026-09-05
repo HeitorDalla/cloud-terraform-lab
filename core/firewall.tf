@@ -1,7 +1,8 @@
 resource "google_compute_firewall" "allow_http" {
-  project = var.project_id
-  name    = var.firewall_name_http
-  network = google_compute_network.vpc_global.name
+  project     = var.project_id
+  name        = var.http_firewall_name
+  description = var.http_firewall_description
+  network     = google_compute_network.main.id
 
   allow {
     protocol = "tcp"
@@ -14,9 +15,10 @@ resource "google_compute_firewall" "allow_http" {
 }
 
 resource "google_compute_firewall" "allow_https" {
-  project = var.project_id
-  name    = var.firewall_name_https
-  network = google_compute_network.vpc_global.name
+  project     = var.project_id
+  name        = var.https_firewall_name
+  description = var.https_firewall_description
+  network     = google_compute_network.main.id
 
   allow {
     protocol = "tcp"
@@ -29,9 +31,10 @@ resource "google_compute_firewall" "allow_https" {
 }
 
 resource "google_compute_firewall" "allow_ssh" {
-  project = var.project_id
-  name    = var.firewall_name_ssh
-  network = google_compute_network.vpc_global.name
+  project     = var.project_id
+  name        = var.ssh_firewall_name
+  description = var.ssh_firewall_description
+  network     = google_compute_network.main.id
 
   allow {
     protocol = "tcp"

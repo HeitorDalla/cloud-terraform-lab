@@ -20,26 +20,51 @@ variable "vpc_name" {
   description = "Nome da VPC para as instancias"
 }
 
+variable "vpc_description" {
+  type        = string
+  description = "Descricao para VPC"
+}
+
 // Firewall
-variable "firewall_name_http" {
+variable "http_firewall_name" {
   type        = string
-  description = "Permitir trafego HTTP para a instancia"
+  description = "Nome da regra que permite trafego HTTP para instancias"
 }
 
-variable "firewall_name_https" {
+variable "http_firewall_description" {
   type        = string
-  description = "Permitir trafego HTTPS para a instancia"
+  description = "Descricao da regra de firewall HTTP"
 }
 
-variable "firewall_name_ssh" {
+variable "https_firewall_name" {
   type        = string
-  description = "Permitir trafego SSH para a instancia"
+  description = "Nome da regra que permite trafego HTTPS para instancias"
+}
+
+variable "https_firewall_description" {
+  type        = string
+  description = "Descricao da regra de firewall HTTPS"
+}
+
+variable "ssh_firewall_name" {
+  type        = string
+  description = "Nome da regra que permite trafego SSH para instancias"
+}
+
+variable "ssh_firewall_description" {
+  type        = string
+  description = "Descricao da regra de firewall SSH"
 }
 
 // Subnets
 variable "subnet_name" {
   type        = string
-  description = "Nome da sub-rede dentro da VPC"
+  description = "Nome da subnet dentro da VPC"
+}
+
+variable "subnet_description" {
+  type        = string
+  description = "Descricao da Subnet"
 }
 
 variable "subnet_cidr" {
