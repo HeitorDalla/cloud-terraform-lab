@@ -1,6 +1,7 @@
 resource "google_compute_instance" "simple_vm" {
   project      = var.project_id
   name         = var.name_vm
+  description  = var.description_vm
   zone         = var.zone_gcp
   machine_type = var.machine_type
 

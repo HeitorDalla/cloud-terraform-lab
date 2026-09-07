@@ -17,7 +17,12 @@ variable "zone_gcp" {
 // VM
 variable "name_vm" {
   type        = string
-  description = "Name vm para rodar servidor web"
+  description = "Nome da VM para rodar servidor web"
+}
+
+variable "description_vm" {
+  type        = string
+  description = "Descricao da VM"
 }
 
 variable "machine_type" {
@@ -29,4 +34,9 @@ variable "machine_type" {
 variable "template_name" {
   type        = string
   description = "Nome do template para instancias VM"
+}
+
+variable "template_description" {
+  type        = string
+  description = "Descricao do template usado para criar grupos de instancia"
 }

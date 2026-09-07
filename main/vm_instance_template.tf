@@ -2,6 +2,7 @@ resource "google_compute_region_instance_template" "tpl" {
   project      = var.project_id
   region       = var.region_gcp
   name         = var.template_name
+  description  = var.template_description
   machine_type = var.machine_type
 
   disk {
