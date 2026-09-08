@@ -31,12 +31,12 @@ variable "machine_type" {
 }
 
 // Instance Template
-variable "template_name" {
+variable "instance_template_name" {
   type        = string
   description = "Nome do template para instancias VM"
 }
 
-variable "template_description" {
+variable "instance_template_description" {
   type        = string
   description = "Descricao do template usado para criar grupos de instancia"
 }
@@ -84,11 +84,22 @@ variable "max_nodes" {
 
   validation {
     condition     = var.max_nodes <= 100 && var.max_nodes >= var.min_nodes
-    error_message = "O maximo de maquinas precisa ser maior ou igual ao minimo de maquinas e manor do que 100"
+    error_message = "O maximo de maquinas precisa ser maior ou igual ao minimo de maquinas e menor do que 100"
   }
 }
 
 variable "initial_node_count" {
   type        = number
   description = "Quantidade de maquinas iniciais no grupo"
+}
+
+// Machine Image
+variable "machine_image_name" {
+  type        = string
+  description = "Nome da imagem de maquina"
+}
+
+variable "machine_image_description" {
+  type        = string
+  description = "Descriacao da imagem de maquina"
 }

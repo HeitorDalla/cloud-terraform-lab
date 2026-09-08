@@ -1,9 +1,9 @@
-resource "google_compute_node_group" "nodes" {
+resource "google_compute_node_group" "sole_tenant" {
   name          = var.node_group_name
   description   = var.node_group_description
   project       = var.project_id
   zone          = var.zone_gcp
-  node_template = google_compute_node_template.template.id
+  node_template = google_compute_node_template.sole_tenant.id
 
   autoscaling_policy {
     mode      = "ONLY_SCALE_OUT"

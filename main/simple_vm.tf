@@ -1,4 +1,4 @@
-resource "google_compute_instance" "simple_vm" {
+resource "google_compute_instance" "web" {
   project      = var.project_id
   name         = var.vm_name
   description  = var.vm_description
@@ -23,5 +23,5 @@ resource "google_compute_instance" "simple_vm" {
 
   metadata_startup_script = file("${path.module}/scripts/startup-script.sh")
 
-  tags = ["http", "https", "ssh"] // pegar as regras de firewall dessa tag
+  tags = ["http", "https", "ssh"]
 }

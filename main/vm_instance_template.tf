@@ -1,8 +1,8 @@
-resource "google_compute_region_instance_template" "tpl" {
+resource "google_compute_region_instance_template" "web" {
   project      = var.project_id
   region       = var.region_gcp
-  name         = var.template_name
-  description  = var.template_description
+  name         = var.instance_template_name
+  description  = var.instance_template_description
   machine_type = var.machine_type
 
   disk {

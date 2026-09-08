@@ -1,4 +1,4 @@
-resource "google_compute_node_template" "template" {
+resource "google_compute_node_template" "sole_tenant" {
   project     = var.project_id
   name        = var.node_template_name
   description = var.node_template_description
