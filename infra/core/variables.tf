@@ -56,6 +56,16 @@ variable "ssh_firewall_description" {
   description = "Descricao da regra de firewall SSH"
 }
 
+variable "health_check_mig_firewall_name" {
+  type        = string
+  description = "Nome da regra de firewall que permite que o health check faca requisicoes para as instancias do MIG"
+}
+
+variable "health_check_mig_firewall_description" {
+  type        = string
+  description = "Descricao da regra de firewall health check mig"
+}
+
 // Subnets
 variable "subnet_name" {
   type        = string
