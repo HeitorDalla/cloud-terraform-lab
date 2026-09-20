@@ -114,3 +114,45 @@ variable "health_check_mig_description" {
   type        = string
   description = "Descricao do health check do MIG"
 }
+
+// Autoscaler
+variable "autoscaler_name" {
+  type        = string
+  description = "Nome do autoscaler para o MIG stateless com standart VMs"
+}
+
+variable "mig_min_replicas" {
+  type        = string
+  description = "Quantidade minima de instancias ativas dentro do MIG"
+}
+
+variable "mig_max_replicas" {
+  type        = string
+  description = "Quantidade maxima de instancias ativas dentro do MIG"
+}
+
+variable "autoscaler_cpu_target" {
+  type        = string
+  description = "Quantidade maximo da CPU para dimensionamento do MIG"
+}
+
+// Managed Instance Group from template
+variable "instance_group_name_from_template" {
+  type        = string
+  description = "Nome do grupo de instancias gerenciadas a partir de um template de uma instancia"
+}
+
+variable "instance_group_description_from_template" {
+  type        = string
+  description = "Descricao do grupo de instancias gerenciadas usando um template de instancias"
+}
+
+variable "mig_zones" {
+  type        = list(string)
+  description = "Zonas de disponibilidade de instancias no MIG"
+}
+
+variable "base_instance_name_img" {
+  type        = string
+  description = "Nome base para as instancias criadas dentro do grupo"
+}
