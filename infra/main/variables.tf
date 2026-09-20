@@ -49,7 +49,7 @@ variable "node_template_name" {
 
 variable "node_template_description" {
   type        = string
-  description = "Nome do template da maquina"
+  description = "Descricao do template da maquina"
 }
 
 variable "node_type" {
@@ -102,4 +102,15 @@ variable "machine_image_name" {
 variable "machine_image_description" {
   type        = string
   description = "Descriacao da imagem de maquina"
+}
+
+// Health Check MIG
+variable "health_check_mig_name" {
+  type        = string
+  description = "Nome do health check do MIG"
+}
+
+variable "health_check_mig_description" {
+  type        = string
+  description = "Descricao do health check do MIG"
 }
