@@ -23,5 +23,5 @@ resource "google_compute_region_instance_template" "web" {
 
   metadata_startup_script = file("${path.module}/scripts/startup-script.sh")
 
-  tags = ["http", "https", "ssh"]
+  tags = ["http", "https", "ssh", "health-check-mig"]
 }
